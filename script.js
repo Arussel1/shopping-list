@@ -1,6 +1,3 @@
-const ul = document.querySelector('ul');
-const input = document.querySelector('input');
-const submit = document.querySelector('button');
 function clicked(event){
     const item = input.value;
     input.value = '';
@@ -12,7 +9,13 @@ function clicked(event){
     del.innerText = 'Delete';
     span.innerText = item;
     ul.appendChild(li);
-
+    del.addEventListener('click',function(){
+        const thisItem = this.parentNode;
+        thisItem.parentNode.removeChild(thisItem);
+    }) 
 }
+const ul = document.querySelector('ul');
+const input = document.querySelector('input');
+const submit = document.querySelector('button');
 
-submit.addEventListener('click',clicked)
+submit.addEventListener('click',clicked);
