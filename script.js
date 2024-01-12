@@ -7,4 +7,4 @@ function clicked(event){
 
 }
 
-button.addEventListener('click',clicked(event))
+button.addEventListener('click',clicked)
