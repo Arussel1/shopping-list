@@ -12,10 +12,11 @@ function clicked(event){
     del.addEventListener('click',function(){
         const thisItem = this.parentNode;
         thisItem.parentNode.removeChild(thisItem);
+        input.focus();
     }) 
+    input.focus();
 }
 const ul = document.querySelector('ul');
 const input = document.querySelector('input');
 const submit = document.querySelector('button');
-
 submit.addEventListener('click',clicked);
