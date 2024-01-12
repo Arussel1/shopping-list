@@ -12,7 +12,6 @@ function clicked(event){
     del.addEventListener('click',function(){
         const thisItem = this.parentNode;
         thisItem.parentNode.removeChild(thisItem);
-        input.focus();
     }) 
     input.focus();
 }
